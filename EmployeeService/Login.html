@@ -78,7 +78,12 @@
                         // $('#divErrorText').text(JSON.stringify(response));
                         // $('#divError').show('fade');
                         // Else if we want to redirect to a new page
-                        sessionStorage.setItem("accessToken", response.access_token);
+
+                        localStorage.setItem("accessToken", response.access_token);
+
+                        // to use sessionstorage
+                        // sessionStorage.setItem("accessToken", response.access_token);
+
                         window.location.href = "Data.html";
                     },
                     // Display errors if any in the Bootstrap alert <div>
